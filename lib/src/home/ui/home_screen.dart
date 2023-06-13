@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpodtutorialproject/src/app_routes_file.dart';
 
+import '../data/providers/home_provider.dart';
+
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
   static const route ='/';
