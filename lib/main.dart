@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpodtutorialproject/src/app_routes_file.dart';
+import 'package:riverpodtutorialproject/src/contants.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox(Constants.settingsStorageKey); // settings
+  await Hive.openBox(Constants.authStorageKey);
   runApp(const ProviderScope(child:MyApp()));
 }
 
